@@ -1,0 +1,69 @@
+.sidebar {
+    padding: 10px;
+  }
+  
+  .filterSection {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+  }
+  
+  .checkbox {
+    width: 16px;
+    height: 16px;
+  }
+  
+  .label {
+    font-weight: bold;
+  }
+  
+  .dropdown {
+    border-top: 1px solid #ccc;
+  }
+  
+  .dropdownHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 10px;
+    padding-bottom: 0;
+    cursor: pointer;
+    font-weight: bold;
+    background-color: #fff;
+  }
+
+  .dropdownGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .dropdownSubTitle {
+    font-size: 14px;
+    font-weight: 500;
+  }
+  
+  .dropdownContent {
+    background-color: #fff;
+    padding: 10px;
+  }
+  
+  .option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .unselectAll {
+    background: none;
+    border: none;
+    color: #c2c4c7;
+    text-decoration: underline;
+    cursor: pointer;
+    font-size: 14px;
+    margin-block: 10px;
+  }
+  

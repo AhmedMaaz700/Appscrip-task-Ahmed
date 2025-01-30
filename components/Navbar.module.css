@@ -1,0 +1,66 @@
+.navbar {
+    width: 100%;
+    background-color: #fff;
+  }
+  
+  .topSection {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+  
+  .iconGroup {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+  
+  .iconGroup svg {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .iconGroup svg:hover {
+    fill: #333;
+  }
+  
+  .logo {
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+  }
+  
+  .bottomSection {
+    justify-content: center;
+    display: none;
+  }
+
+  .optionGroup {
+    display: flex;
+    gap: 3rem;
+    font-size: 12px;
+    font-weight: bold;
+  }
+  
+  @media (min-width: 601px) {
+    .bottomSection {
+      display: flex;
+    }
+    .menuIcon {
+        display: none;
+      }
+  }  
+  
+  @media (max-width: 600px) {
+    .bottomSection {
+    }
+  
+    .menuIcon {
+      display: block;
+    }
+  }
+  

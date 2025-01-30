@@ -1,0 +1,145 @@
+.footer {
+    padding: 2rem;
+    background-color: #000;
+    color: #fff;
+}
+
+.divider {
+    width: 100%;
+    height: 1px;
+    background-color: #fff;
+    margin-top: 1rem;
+}
+
+.topSection {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.leftSection {
+    display: flex;
+    flex-direction: column;
+    width: 65%;
+    text-align: left;
+}
+
+.rightSection {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 35%;
+    text-align: left;
+}
+
+.topDivider {
+    width: 100%;
+    height: 1px;
+    background-color: #fff;
+    margin: 2rem 0;
+}
+
+@media (max-width: 600px) {
+    .topSection {
+        flex-direction: column;
+        text-align: left;
+    }
+
+    .leftSection,
+    .rightSection {
+        width: 100%;
+    }
+}
+
+.heading {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.subHeading {
+    color: #c2c4c7;
+    font-size: 16px;
+}
+
+.usd {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    gap: 5px;
+}
+
+.copyright {
+    color: #c2c4c7;
+    font-size: 16px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.email {
+    display: flex;
+    gap: 1rem;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.input {
+    border: 0;
+    color: #000;
+    background-color: #fff;
+}
+
+.button {
+    padding: 5px 10px;
+    background-color: #000;
+    color: #fff;
+    border: 1px solid #fff;
+    height: 30px;
+}
+
+.bottomSection {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.li {
+    margin-bottom: 4px;
+    font-size: 14px;
+    text-transform: capitalize;
+}
+
+.lastHeading {
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.svgs {
+    display: flex;
+    gap: 4px;
+}
+
+.bottomSectionDesktop {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.bottomSectionMobile {
+    display: none;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 10px;
+}
+
+@media (max-width: 600px) {
+    .bottomSectionDesktop {
+        display: none;
+    }
+
+    .bottomSectionMobile {
+        display: flex;
+    }
+}
