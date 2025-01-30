@@ -35,7 +35,10 @@
   }
   
   .bottomSection {
-    justify-content: center;
+    display: none;
+  }
+
+  .bottomSection2 {
     display: none;
   }
 
@@ -45,22 +48,43 @@
     font-size: 12px;
     font-weight: bold;
   }
+
+  .languageSelector {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .hidden {
+    display: none;
+}
+
+    .visible {
+        display: flex;
+        justify-content: center;
+    }
   
   @media (min-width: 601px) {
     .bottomSection {
       display: flex;
+      justify-content: center;
     }
     .menuIcon {
-        display: none;
-      }
-  }  
+      display: none;
+    }
+    .languageSelector {
+        display: flex;
+        align-items: center;
+    }
+  }
   
   @media (max-width: 600px) {
-    .bottomSection {
-    }
-  
     .menuIcon {
       display: block;
     }
+    .languageSelector {
+      display: none;
+    }
   }
+  
   

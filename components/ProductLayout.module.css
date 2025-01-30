@@ -1,0 +1,79 @@
+.divider {
+    width: 100%;
+    height: 1px;
+    background-color: #c2c4c7;
+    margin-block: 1rem;
+  }
+  
+  .topSection {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .itemsInfo {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+  }
+  
+  .itemsCount {
+    font-size: 14px;
+    font-weight: bold;
+  }
+  
+  .filterToggle {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    cursor: pointer;
+    color: #c2c4c7;
+    text-transform: uppercase;
+    text-decoration: underline;
+    font-size: 14px;
+  }
+  
+  .dropdownWrapper {
+    position: relative;
+  }
+  
+  .dropdownButton {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: none;
+    background-color: #fff;
+  }
+  
+  .dropdownMenu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 200px;
+    background-color: #fff;
+    z-index: 10;
+  }
+  
+  .rowLayout {
+    display: flex;
+  }
+  
+  .columnLayout {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .filterWrapper {
+    width: 25%;
+  }
+
+  @media (max-width: 600px) {
+    .filterWrapper {
+      width: 100%;
+      transition: ease-in 0.3s;
+    }
+  }

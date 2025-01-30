@@ -1,5 +1,5 @@
 "use client"
-import React, {useState} from 'react'
+import React, {useState, useEffect } from 'react'
 import { Menu, Search, Heart, ShoppingBag, CircleUserRound, ChevronDown } from 'lucide-react'
 import styles from './Navbar.module.css'
 
@@ -9,6 +9,21 @@ export default function Navbar() {
     const toggleMenu = () => {
         setIsMenuOpen(prevState => !prevState)
     }
+    
+    useEffect(() => {
+        const handleResize = () => {
+          if (window.innerWidth > 600) {
+            setIsMenuOpen(false);
+          }
+        };
+    
+        window.addEventListener("resize", handleResize);
+        
+        // Run once in case window is already >600px
+        handleResize();  
+    
+        return () => window.removeEventListener("resize", handleResize);
+      }, []);
 
     return (
         <nav className={styles.navbar}>
@@ -27,12 +42,14 @@ export default function Navbar() {
                         <Search />
                         <Heart />
                         <ShoppingBag />
+                        <span className={styles.languageSelector}>
                         <CircleUserRound />
-                        <span className={styles.menuIcon} style={{alignItems: 'center'}}>ENG<ChevronDown /></span>
+                        <span style={{ display: 'flex', alignItems: 'center' }}>ENG<ChevronDown /></span>
+                        </span>
                     </div>
                 </div>                
             </div>
-            {!isMenuOpen&&(<div className={styles.bottomSection}>
+            {<div className={styles.bottomSection}>
                  <div className={styles.optionGroup}>
                      <div>SHOP</div>
                      <div>SKILLS</div>
@@ -40,7 +57,16 @@ export default function Navbar() {
                      <div>ABOUT</div>
                      <div>CONTACT US</div>
                  </div>
-             </div>)}
+             </div>}
+             <div className={isMenuOpen ? styles.visible : styles.hidden}>
+             <div className={styles.optionGroup}>
+                     <div>SHOP</div>
+                     <div>SKILLS</div>
+                     <div>STORIES</div>
+                     <div>ABOUT</div>
+                     <div>CONTACT US</div>
+                 </div>
+            </div>
         </nav>
     )
 }
