@@ -44,11 +44,6 @@ a {
   }
 }
 
-.container {
-  max-width: 1440px;
-  margin: auto;
-}
-
 .strip {
   height: 32px;
   background-color: #000000;
