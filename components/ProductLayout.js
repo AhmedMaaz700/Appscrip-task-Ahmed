@@ -33,15 +33,15 @@ export default function ProductLayout() {
     <>
       <div className={styles.divider}></div>
 
-      <div className={styles.topSection}>
-        <div className={styles.itemsInfo}>
+      {/* <div className={styles.topSection}>
+        {isMobile ? <p className={styles.filter} onClick={toggleFilter}>FILTER</p> : <div className={styles.itemsInfo}>
           <p className={styles.itemsCount}>3425 ITEMS</p>
           <div className={styles.filterToggle} onClick={toggleFilter}>
             {isOpenFilter && <ChevronLeft />}
-            <span>{!isOpenFilter ? "SHOW" : "HIDE"}FILTER</span>
+            <span>{!isOpenFilter ? "SHOW " : "HIDE "}FILTER</span>
             {!isOpenFilter && <ChevronRight />}
           </div>
-        </div>
+        </div>}
 
         <div className={styles.dropdownWrapper}>
           <button className={styles.dropdownButton} onClick={toggleDropdown}>
@@ -60,7 +60,48 @@ export default function ProductLayout() {
             </div>
           )}
         </div>
-      </div> 
+      </div>  */}
+      <div className={styles.topSection}>
+        {isMobile ? (
+          <div className={styles.mobileTopSection}>
+            <p className={styles.filter} onClick={toggleFilter}>FILTER</p>
+            <div className={styles.verticalDivider}></div>
+            {/* <button className={styles.dropdownButton} onClick={toggleDropdown}>
+              <span>{selectedOption}</span>
+              <ChevronDown />
+            </button> */}
+          </div>
+        ) : (
+          <div className={styles.itemsInfo}>
+            <p className={styles.itemsCount}>3425 ITEMS</p>
+            <div className={styles.filterToggle} onClick={toggleFilter}>
+              {isOpenFilter && <ChevronLeft />}
+              <span>{!isOpenFilter ? "SHOW " : "HIDE "}FILTER</span>
+              {!isOpenFilter && <ChevronRight />}
+            </div>
+          </div>
+        )}
+
+        { (
+          <div className={styles.dropdownWrapper}>
+            <button className={styles.dropdownButton} onClick={toggleDropdown}>
+              <span>{selectedOption}</span>
+              <ChevronDown />
+            </button>
+
+            {isOpen && (
+              <div className={styles.dropdownMenu}>
+                {["RECOMMENDED", "NEWEST FIRST", "POPULAR", "PRICE: HIGH TO LOW", "PRICE: LOW TO HIGH"].map((option) => (
+                  <div key={option} className={`${styles.dropdownItem} ${selectedOption === option ? styles.selected : ""}`} onClick={() => selectOption(option)}>
+                    {selectedOption === option && <Check className={styles.checkIcon} />}
+                    <span>{option}</span>
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+        )}
+      </div>
    
       <div className={styles.divider}></div>
 

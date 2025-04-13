@@ -28,10 +28,15 @@
   }
   
   .logo {
-    font-size: 20px;
+    font-size: 36px;
+    font-family: inter;
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 1.5px;
+  }
+
+  .logoMargin {
+    margin-left: 11rem;
   }
   
   .bottomSection {
@@ -45,7 +50,7 @@
   .optionGroup {
     display: flex;
     gap: 3rem;
-    font-size: 12px;
+    font-size: 20px;
     font-weight: bold;
   }
 
