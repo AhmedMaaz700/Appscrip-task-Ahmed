@@ -53,7 +53,7 @@ export default function ProductLayout() {
           <div className={styles.dropdownWrapper}>
             <button className={styles.dropdownButton} onClick={toggleDropdown}>
               <span>{selectedOption}</span>
-              <ChevronDown />
+              <ChevronDown size={16}/>
             </button>
 
             {isOpen && (

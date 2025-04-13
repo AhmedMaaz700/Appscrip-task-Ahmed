@@ -21,3 +21,15 @@
     font-size: 22px;
     line-height: 40px;
 }
+
+@media (max-width: 600px) {
+    .title {
+        font-size: 24px;
+    }
+
+    .description {
+        font-size: 16px;
+        line-height: 22px;
+    }
+    
+}

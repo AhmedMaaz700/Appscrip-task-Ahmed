@@ -9,7 +9,6 @@
     width: 1px;
     height: 100%;
     background-color: #c2c4c7;
-    margin-inline: 1rem;
   }
   
   .topSection {
@@ -63,6 +62,8 @@
     text-transform: uppercase;
     border: none;
     background-color: #fff;
+    font-family: Simplon Norm;
+    font-size: 14px;
   }
   
   .dropdownMenu {
@@ -72,6 +73,21 @@
     width: 200px;
     background-color: #fff;
     z-index: 10;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1)
+  }
+
+  .dropdownItem {
+    padding: 5px;
+  }
+
+  .selected {
+    font-family: Simplon Norm;
+    font-size: 14px;
+    font-weight: bold;
+
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
   }
 
   .filter {
@@ -81,7 +97,7 @@
     text-transform: uppercase;
     border: none;
     background-color: #fff;
-    /* width: 50%; */
+    font-size: 14px;
     text-align: center;
   }
   

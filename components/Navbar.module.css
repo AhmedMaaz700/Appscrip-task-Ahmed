@@ -90,6 +90,22 @@
     .languageSelector {
       display: none;
     }
+    .optionGroup {
+      font-size: 12px;
+    }
+    .logo {
+      font-size: 20px;
+    }
+    .topSection {
+      margin-bottom: 1rem;
+    }
+    .iconGroup {
+      gap: 4px;
+    }
   }
   
-  
+  @media (max-width: 425px) {
+    .optionGroup {
+      gap: 1rem
+    }
+  }

@@ -43,11 +43,24 @@ export default function Footer() {
           </div>
           <div className={styles.rightSection}>
             <div className={styles.contactUs}>
-              <p className={styles.topHeading}>Contact Us</p>
-              <p className={styles.subHeading}>+44 221 133 5360</p>
-              <p className={styles.subHeading}>customercare@mettamuse.com</p>
+              <div className={`${styles.divider} ${styles.mobileOnly}`} />
+              <p className={`${styles.topHeading} ${styles.desktopOnly}`}>Contact Us</p>
+              <p className={`${styles.topHeading} ${styles.mobileOnly}`}>Call Us</p>
+              <div className={styles.desktopOnly}>
+                <p className={styles.subHeading}>+44 221 133 5360</p>
+                <p className={styles.subHeading}>customercare@mettamuse.com</p>
+              </div>
+              <div className={styles.mobileOnlyStyle}>
+                <p className={styles.subHeading}>+44 221 133 5360</p>
+                <svg width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M3 0L4.48492 1.51508L6 3L4.48492 4.48492L3 6L1.51508 4.48492L0 3L1.51508 1.51508L3 0Z" fill="white"/>
+                </svg>
+                <p className={styles.subHeading}>customercare@mettamuse.com</p>
+              </div>
             </div>
+            
             <div className={styles.currency}>
+              <div className={`${styles.divider} ${styles.mobileOnly}`} />
               <p className={styles.topHeading}>Currency</p>
               <div className={styles.usd}>
                 <svg
@@ -89,9 +102,12 @@ export default function Footer() {
                     </clipPath>
                   </defs>
                 </svg>
-                <p className={styles.usdText}>+ USD</p>
+                <svg width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3 0L4.48492 1.51508L6 3L4.48492 4.48492L3 6L1.51508 4.48492L0 3L1.51508 1.51508L3 0Z" fill="white"/>
+                </svg>
+                <p className={styles.usdText}>USD</p>
               </div>
-              <p className={styles.subHeading}>
+              <p className={`${styles.subHeading} ${styles.desktopOnly}`}>
                 Transactions will be completed in Euros and a currency reference
                 is available on hover.
               </p>
