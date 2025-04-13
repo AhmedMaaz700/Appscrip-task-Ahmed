@@ -24,9 +24,12 @@ export default function Footer() {
         <div className={styles.topSection}>
           <div className={styles.leftSection}>
             <div className={styles.headingSection}>
-              <p className={styles.heading}>Be the first to know</p>
-              <p className={styles.subHeading}>
+              <p className={styles.topHeading}>Be the first to know</p>
+              <p className={`${styles.subHeading} ${styles.mobileHide}`}>
                 Sign up for updates from mettā muse.
+              </p>
+              <p className={`${styles.subHeading} ${styles.desktopHide}`}>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. this is simply dummy text.
               </p>
             </div>
             <div className={styles.email}>
@@ -40,12 +43,12 @@ export default function Footer() {
           </div>
           <div className={styles.rightSection}>
             <div className={styles.contactUs}>
-              <p className={styles.heading}>Contact Us</p>
+              <p className={styles.topHeading}>Contact Us</p>
               <p className={styles.subHeading}>+44 221 133 5360</p>
               <p className={styles.subHeading}>customercare@mettamuse.com</p>
             </div>
             <div className={styles.currency}>
-              <p className={styles.heading}>Currency</p>
+              <p className={styles.topHeading}>Currency</p>
               <div className={styles.usd}>
                 <svg
                   width="24"

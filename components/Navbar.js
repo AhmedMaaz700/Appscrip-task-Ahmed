@@ -28,18 +28,6 @@ export default function Navbar() {
     const toggleMenu = () => {
         setIsMenuOpen(prevState => !prevState)
     }
-    
-    // useEffect(() => {
-    //     const handleResize = () => {
-    //       if (window.innerWidth > 600) {
-    //         setIsMenuOpen(false);
-    //       }
-    //     };
-    
-    //     window.addEventListener("resize", handleResize);      
-    //     handleResize();  
-    //     return () => window.removeEventListener("resize", handleResize);
-    //   }, []);
 
     return (
         <nav className={styles.navbar}>

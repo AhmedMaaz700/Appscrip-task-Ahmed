@@ -48,3 +48,30 @@ a {
   max-width: 1440px;
   margin: auto;
 }
+
+.strip {
+  height: 32px;
+  background-color: #000000;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.lorem-container {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.lorem-text {
+  color: #EB4C6B;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+@media (max-width: 600px) {
+  .mobileHide {
+    display: none;
+  }
+}

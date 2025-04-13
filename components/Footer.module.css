@@ -51,6 +51,13 @@
     }
 }
 
+.topHeading {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
 .heading {
     text-transform: uppercase;
     font-weight: bold;
@@ -61,6 +68,11 @@
 .subHeading {
     color: #c2c4c7;
     font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.desktopHide {
+    display: none;
 }
 
 .usd {
@@ -149,6 +161,14 @@
         flex-direction: column;
     }
 
+    .desktopHide {
+        display: block;
+    }
+
+    .mobileHide {
+        display: none;
+    }
+
     .dropdownHeader {
         display: flex;
         justify-content: space-between;
@@ -170,7 +190,12 @@
         margin-top: 1rem;
     }
 
+    .topHeading {
+        font-size: 16px;
+    }
+
     .heading {
+        font-size: 16px;
         margin-bottom: 0;
     }
 
